@@ -30,3 +30,7 @@ jobs:
           if ! [[ $output == *"${expected_substring}"* ]]; then
             exit 1
           fi
+      - id: imports-improperly-sorted-summary
+        uses: ./
+        with:
+          sortPaths: test/bad.py
